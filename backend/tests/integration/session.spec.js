@@ -12,7 +12,7 @@ describe('ONG DASHBOARD', () => {
 
     afterAll(async () => {
         await connection.migrate.rollback();
-        connection.destroy();
+        await connection.destroy();
     });
 
     it('should be able to login with ong_id and return the ong`s name', async () => {

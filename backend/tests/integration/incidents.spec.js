@@ -12,7 +12,7 @@ describe('INCIDENTS', () => {
 
     afterAll(async () => {
         await connection.migrate.rollback();
-        connection.destroy();
+        await connection.destroy();
     });
 
     it('should be able to create a new Incident', async () => {
